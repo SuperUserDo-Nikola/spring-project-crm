@@ -1,10 +1,10 @@
-# spring-project-crm
+# Spring-Project-CRM
 
 Project contains:
 Spring,
 Spring MVC,
 Spring Security,
-Hibernate
+Hibernate.
 
 Updates to come:
 Custom Validations,
