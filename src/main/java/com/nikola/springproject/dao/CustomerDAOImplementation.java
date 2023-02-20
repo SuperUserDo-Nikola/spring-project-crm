@@ -13,13 +13,14 @@ import java.util.List;
 public class CustomerDAOImplementation implements ICustomerDAO{
     @Autowired
     private SessionFactory sessionFactory;
+
     @Override
     public List<Customer> getCustomers(int theSortField) {
 
-        // Get the current hibernate session
-        Session session = sessionFactory.getCurrentSession();
+        // get the current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
 
-        // Determine sort field
+        // determine sort field
         String theFieldName = null;
 
         switch (theSortField) {
@@ -32,23 +33,20 @@ public class CustomerDAOImplementation implements ICustomerDAO{
             case SortUtils.EMAIL:
                 theFieldName = "email";
                 break;
-            case SortUtils.CITY:
-                theFieldName = "city";
-                break;
             default:
                 // if nothing matches the default to sort by lastName
                 theFieldName = "lastName";
         }
 
-
-
-        // Create query and get result list
+        // create a query
         String queryString = "from Customer order by " + theFieldName;
-        Query<Customer> query = session.createQuery(queryString, Customer.class);
+        Query<Customer> theQuery =
+                currentSession.createQuery(queryString, Customer.class);
 
-        // Execute query and get result list
-        List<Customer> customers = query.getResultList();
+        // execute query and get result list
+        List<Customer> customers = theQuery.getResultList();
 
+        // return the results
         return customers;
     }
 

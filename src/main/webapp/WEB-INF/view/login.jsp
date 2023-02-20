@@ -118,7 +118,7 @@
 							<div class="col-sm-6 controls">
 								<button type="submit" class="btn btn-success">Login</button>
 							</div>
-							<div class="col-sm-6"><img style="height: 35px; margin-left: -40px;" src="${pageContext.request.contextPath}/assets/img/lock.png"></div>
+							<div class="col-sm-6"><img style="height: 32px; margin-left: -55px;" src="${pageContext.request.contextPath}/assets/img/lock.png"></div>
 						</div>
 
 						<!-- I'm manually adding tokens ! -->

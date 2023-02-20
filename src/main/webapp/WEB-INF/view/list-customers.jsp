@@ -42,15 +42,14 @@
 						<img src="${pageContext.request.contextPath}/assets/img/unlock.png" width="30" height="30" class="d-inline-block align-top" alt="">
 
 					</a>
-						<form class="d-flex">
-						<form:form action="search" method="get">
-							<input type="text" placeholder="Search" name="theSearchName" class="form-control me-2"/>
-							<input type="submit" value="Search" class="btn btn-outline-success"/>
-						</form:form>
+
+							<p style="margin-top: 15px; margin-left: 15px">
+								Username: <security:authentication property="principal.username" />, Role(s): <security:authentication property="principal.authorities" />
+							</p>
+
 						<form:form action="${pageContext.request.contextPath}/logout" method="post">
 							<input style="margin-left: 5px" type="submit" value="Logout" class="btn btn-danger">
 						</form:form>
-						</form>
 				</div>
 			</div>
 		</nav>
@@ -61,15 +60,16 @@
 
 		<div class="row">
 			<div class="col-lg-1 col-sm-12"></div>
-			<div class="col-lg-10 col-sm-12">
-				<p>
-					Username: <security:authentication property="principal.username" />, Role(s): <security:authentication property="principal.authorities" />
-				</p>
+			<div class="col-lg-3 col-sm-12"></div>
+			<div class="col-lg-4 col-sm-12">
+				<form:form action="search" method="GET">
+					<input type="text" placeholder="Search" name="theSearchName" class="form-control me-2"/>
+					<input type="submit" value="Search" class="form-control btn btn-outline-success"/>
+				</form:form>
 			</div>
-			<div class="col-lg-1 col-sm-12"></div>
 		</div>
 
-		<div class="row">
+		<div class="row" style="margin-top: 5px">
 			<div class="col-lg-1 col-sm-12"></div>
 
 			<div class="col-lg-10 col-sm-12 tbodyDiv" >
