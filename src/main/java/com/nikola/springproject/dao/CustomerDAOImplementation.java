@@ -24,18 +24,16 @@ public class CustomerDAOImplementation implements ICustomerDAO{
         String theFieldName = null;
 
         switch (theSortField) {
-            case SortUtils.FIRST_NAME:
-                theFieldName = "firstName";
-                break;
-            case SortUtils.LAST_NAME:
-                theFieldName = "lastName";
-                break;
-            case SortUtils.EMAIL:
-                theFieldName = "email";
-                break;
-            default:
-                // if nothing matches the default to sort by lastName
-                theFieldName = "lastName";
+            case SortUtils.FIRST_NAME -> theFieldName = "firstName";
+
+            case SortUtils.LAST_NAME ->  theFieldName = "lastName";
+
+            case SortUtils.EMAIL -> theFieldName = "email";
+
+            case SortUtils.CITY -> theFieldName = "city";
+
+            // if nothing matches the default to sort by lastName
+            default -> theFieldName = "lastName";
         }
 
         // create a query

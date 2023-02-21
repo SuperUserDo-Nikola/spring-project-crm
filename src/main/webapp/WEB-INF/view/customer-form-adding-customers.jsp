@@ -46,6 +46,10 @@
 
 
     <form:form action="saveCustomer" modelAttribute="customer" method="post">
+
+        <%--    Need to associate this data with customer id!!!--%>
+        <form:hidden path="id"/>
+
         <section class="h-100 bg-dark">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
