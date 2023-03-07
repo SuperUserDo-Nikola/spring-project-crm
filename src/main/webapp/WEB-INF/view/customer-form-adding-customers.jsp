@@ -64,33 +64,48 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <form:input path="firstName" id="form3Example1m" class="form-control form-control-lg"/>
+
                                                     <label class="form-label" for="form3Example1m">First name</label>
+                                                    <form:input path="firstName" id="form3Example1m" class="form-control form-control-lg"/>
+                                                    <form:errors path="firstName" cssClass="error"/>
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <form:input path="lastName" id="form3Example1n" class="form-control form-control-lg"/>
+
                                                     <label class="form-label" for="form3Example1n">Last name</label>
+                                                    <form:input path="lastName" id="form3Example1n" class="form-control form-control-lg"/>
+                                                    <form:errors path="lastName" cssClass="error"/>
+
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <form:input path="email" id="form3Example97" class="form-control form-control-lg"/>
+
                                             <label class="form-label" for="form3Example97">Email</label>
+                                            <form:input path="email" id="form3Example97" class="form-control form-control-lg"/>
+                                            <form:errors path="email" cssClass="error"/>
+
                                         </div>
 
                                         <div class="row">
                                             <div class="form-outline col-md-6 mb-4">
-                                                <form:input path="city" id="form3Example9" class="form-control form-control-lg"/>
+
                                                 <label class="form-label" for="form3Example9">City</label>
+                                                <form:input path="city" id="form3Example9" class="form-control form-control-lg"/>
+                                                <form:errors path="city" cssClass="error"/>
+
                                             </div>
 
 
                                             <div class="form-outline col-md-6 mb-4">
-                                                <form:input path="address" id="form3Example8" class="form-control form-control-lg"/>
+
                                                 <label class="form-label" for="form3Example8">Address</label>
+                                                <form:input path="address" id="form3Example8" class="form-control form-control-lg"/>
+                                                <form:errors path="address" cssClass="error"/>
+
                                             </div>
                                         </div>
 

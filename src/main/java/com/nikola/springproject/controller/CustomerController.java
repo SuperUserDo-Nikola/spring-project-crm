@@ -6,8 +6,10 @@ import com.nikola.springproject.utility.SortUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -51,12 +53,17 @@ public class CustomerController {
     }
 
     @PostMapping("/saveCustomer")
-    public String saveCustomer(@ModelAttribute("customer") Customer theCustomer){
+    public String saveCustomer(@Valid @ModelAttribute("customer") Customer theCustomer, BindingResult bindingResult){
 
-        // Save the customer using service
-        customerService.saveCustomer(theCustomer);
 
-        return "redirect:/customer/list";
+        if (bindingResult.hasErrors()){
+            return "customer-form-adding-customers";
+        }else {
+            // Save the customer using service
+            customerService.saveCustomer(theCustomer);
+            return "redirect:/customer/list";
+        }
+
 
     }
 
