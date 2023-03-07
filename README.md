@@ -4,12 +4,11 @@ Project contains:
 Spring,
 Spring MVC,
 Spring Security,
+Spring AOP,
+Validations
 Hibernate.
 
-Updates to come:
-Custom Validations,
-Spring AOP,
-etc...
+Updates to come...
 
 Data for testing: 
 
