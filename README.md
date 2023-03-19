@@ -8,11 +8,16 @@ Spring AOP,
 Validations
 Hibernate.
 
-Updates to come...
+- Make sure to use MySQL and to run both scripts first
 
-Data for testing: 
+- Change persistence-mysql.properties and security-persistence-mysql.properties under resources accoring to your DB
 
-Role Employee: username: john  - pass: fun123,
-Role Manager: username: mary - pass: fun123
+- Data for testing: 
 
-Roles: Employee(Plain view and serach option), Manager(Employee + Update option), Admin(Manager + Delete option)
+- Role Employee: username: john  - pass: fun123,
+- Role Manager: username: mary - pass: fun123
+- Role Admin: username: nikola - pass: nikola
+
+- Roles: Employee(Plain view and serach option), Manager(Employee + Update option), Admin(Manager + Delete option)
+
+
